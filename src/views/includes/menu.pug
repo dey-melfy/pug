@@ -1,0 +1,42 @@
+//- h1 2.5 - Menu multinivel
+//-         -
+//-             var pages=[
+//-                 {
+//-                     title:'Home',
+//-                     url:'index.html',
+//-                     child:[]
+//-                 },
+//-                 {
+//-                     title:'Services',
+//-                     url:'Services.html',
+//-                     child:[
+//-                         {
+//-                             title:'Web design',
+//-                             url:'Web-design.html'
+//-                         },
+//-                         {
+//-                             title:'Seo',
+//-                             url:'Seo.html'
+//-                         }
+//-                     ]
+//-                 },
+//-                 {
+//-                     title:'Contact',
+//-                     url:'Contact.html',
+//-                     child:[]
+//-                 },
+//-                 {
+//-                     title:'Quienes Somos',
+//-                     url:'Quienes-Somos.html',
+//-                     child:[]
+//-                 }
+
+//-             ]
+//-         ul
+//-             each page in pages
+//-                 li
+//-                     a(href=page.url)=page.title
+//-                     if page.child.length > 0
+//-                         ul
+//-                             each subPage in page.child
+//-                                 li: a(href=subPage.url)=subPage.title

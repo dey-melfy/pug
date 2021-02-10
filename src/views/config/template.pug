@@ -1,0 +1,175 @@
+include config
+include mixins
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title
+            block title
+        block  styles 
+            link(rel="stylesheet", href="css/main-min.css")
+            link(rel="stylesheet", href="css/main.css")       
+    body
+        
+        //- h1 1.4-Agregar scripts 
+        //- script. 
+        //-     let numero=32
+        //-     console.log(numero)
+
+        //-**************************************************************************
+
+        //- h1 1.4-Agregar estilos embebido
+        //- style. 
+        //-     h1{
+        //-         color:orange;
+        //-     }
+
+        //-***************************************************************************
+
+        //- h1 1.4-Agregar estilos en lineas
+        //-     p(style={color:"red", "font-size":"1em"}) soy un estilos en linea
+
+        //-**************************************************************************
+
+        //- h1 1.5-Anidaciones y detalles
+        //- ul
+        //-  li: a(href="#") 
+        //-         |click
+        //- p 
+        //-     |lorem #[i hola dey] ipsum, dolor sit amet consectetur adipisicing elit. #[span hola mefy] Dolores voluptatum ut quos hic eligendi <i>ducimus</i> quaerat exercitationem, modi rerum, cumque deleniti #[span hola dey] illo animi repellendus doloribus molestias quam ex dolorum quisquam!
+
+        //-************************************************************************
+
+        //- h1 2.1-Implementación de codigo Javascript "code unbuffered"
+
+        //- - let name='dey'
+        //- - let correntpage='home'
+        //- - let correntpages='homes'
+        //- h2=`mi nombre es ${name}`
+
+        //- p(class=correntpage).main-poage hola
+
+        //- -
+        //-     let objeto={
+        //-         apellido:'Herrera',
+        //-         edad:31,
+        //-     }
+        //- p=`hola sr. ${objeto.apellido}
+
+        //-*************************************************************
+
+        //- h1 2.2-Condicionales
+
+        //- - var name='Dey'
+
+        //- if 5>3
+        //-     p=`Hola ${name}`
+        //- else 
+        //-     p La condicion no se cumplio
+
+        //-***********************************************************
+
+        //- h1 2.3-Ciclos
+
+        //-ejemplos-1
+
+        //- - var days=['Lunes', 'Martes','Miercoles']
+        //- each day, i in days
+        //-     //- p=day
+        //-     p=`${day.toUpperCase()} es el dia ${i+1}`
+        
+        //-ejemplos-2 recorrer arrays
+
+        //- - pages=['home','quines somos','contacto']
+
+        //- ul
+        //-     each page in pages
+        //-         li: a(href=`${page.split(' ').join('-')}.html`)=page
+        //-     else 
+        //-         li No hay elementos disponible
+        
+        //-************************************************************************
+        
+        //- h1 2.4-Recorrer Objetos
+        //- -
+        //-     var Compani={
+        //-         ceo:'Dey Melfy',
+        //-         secretario:'Leydis Carolina',
+        //-         tecnico:'Diana Herrera'
+        //-     }
+        //- ul 
+        //-     each val, key in Compani
+        //-         li=`${val} es el ${key} de Compani S.R.L`
+
+        //-********************************************************************************
+        
+        //- h1 2.5 - Menu multinivel
+        //- -
+        //-     var pages=[
+        //-         {
+        //-             title:'Home',
+        //-             url:'index.html',
+        //-             child:[]
+        //-         },
+        //-         {
+        //-             title:'Services',
+        //-             url:'Services.html',
+        //-             child:[
+        //-                 {
+        //-                     title:'Web design',
+        //-                     url:'Web-design.html'
+        //-                 },
+        //-                 {
+        //-                     title:'Seo',
+        //-                     url:'Seo.html'
+        //-                 }
+        //-             ]
+        //-         },
+        //-         {
+        //-             title:'Contact',
+        //-             url:'Contact.html',
+        //-             child:[]
+        //-         },
+        //-         {
+        //-             title:'Quienes Somos',
+        //-             url:'Quienes-Somos.html',
+        //-             child:[]
+        //-         }
+
+        //-     ]
+        //- ul
+        //-     each page in pages
+        //-         li
+        //-             a(href=page.url)=page.title
+        //-             if page.child.length > 0
+        //-                 ul
+        //-                     each subPage in page.child
+        //-                         li: a(href=subPage.url)=subPage.title
+
+        //-********************************************************************************
+
+        //- includes: incluir el contenido de un archivo en otro
+
+        //- include includes/menu
+
+        //-********************************************************************************
+
+        //- extends: para crear la estructura
+
+        //-********************************************************************************
+
+        //- block  content
+        //-     p=metaDescription
+        //- block header
+        //- //-include menu
+        //- block footer
+        //-     footer
+        //-         p=pageTitle
+        //- script.
+        //-     console.log('hola mundo')
+
+        //-********************************************************************************
+
+        //-mixins
+        block content

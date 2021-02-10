@@ -1,0 +1,7 @@
+**instalacion unica**
+nom install --global gulp-cli
+
+**instalaciones que se hab de ejecutar en cada proyecto en el querais incluir gulp
+1-npm init 
+2-npm install --save-dev gulp
+4-npm install --save-dev @babel/core @babel/register @babel/preset-env
